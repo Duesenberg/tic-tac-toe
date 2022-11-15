@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Pixel";
+  src: url(./fonts/04B_30__.TTF);
+}
+
+@font-face {
+  font-family: "Press Start";
+  src: url(./fonts/PressStart2P.ttf);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  min-height: 100vh;
+  height: auto;
+  background-color: #cffafe;
+  display: grid;
+}
+
+
+.popup {
+  align-self: center;
+  justify-self: center;
+  width: 710px;
+  height: 440px;
+  background-color: #06b6d4;
+  border: 3px solid #fcd34d;
+  border-radius: 20px;
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.popup div {
+  font-family: "Pixel", sans-serif;
+  color: #fcd34d;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.popup button {
+  font-size: 1.5rem;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  color: #fcd34d;
+  background-color: #cffafe;
+}
+
+.popup button:hover {
+  scale: 1.025;
+  background-color: #fcd34d;
+  color: rgb(34, 34, 34);
+}
+
+.popup button:active {
+  scale: 1;
+}
+
+.game {
+  justify-self: center;
+  align-self: center;
+  background-color: #06b6d4;
+  padding: 30px;
+  display: grid;
+  grid-template: 1fr 310px / 310px 310px;
+  gap: 30px;
+  border-radius: 20px;
+}
+
+.title {
+  grid-area: 1 / 1 / 2 / 3;
+  font-family: "Pixel", sans-serif;
+  font-size: 2.5rem;
+  justify-self: center;
+  align-self: center;
+  color: #fcd34d;
+}
+
+.controls {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+}
+
+button, .desc {
+  font-family: "Press Start";
+  font-size: .85rem;
+  color: #fcd34d;
+}
+
+button.change-mode, button.reset-button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: #fcd34d;
+  background-color: #cffafe;
+}
+
+button.change-mode:hover, button.reset-button:hover {
+  scale: 1.025;
+  background-color: #fcd34d;
+  color: rgb(34, 34, 34);
+}
+
+button.change-mode:active, button.reset-button:active {
+  scale: 1;
+}
+
+.result-text {
+  font-family: "Pixel";
+  color: #fcd34d;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.gameboard {
+  justify-self: center;
+  align-self: center;
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: rgb(34, 34, 34);
+  width: 310px;
+  height: 310px;
+  border: 5px solid rgb(34, 34, 34);
+  border-radius: 10px;
+  display: grid;
+  gap: 5px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.cell {
+  background-color: #cffafe;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  font-family: "Press Start";
+  color: rgb(56, 56, 56);
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 105px;
+  text-indent: 7px;
+}
+
+.cell:hover {
+  background-color: #fcd34d;
+  scale: 1.025;
+}
+
+.cell:active {
+  background-color: #fcd34d;
+  scale: 1;
+}

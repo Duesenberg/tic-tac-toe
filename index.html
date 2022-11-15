@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="popup">
+      <div>Choose game type:</div>
+      <button onclick="gameContr.setGameModeOne(); gameContr.gameModePopupHide()">Player vs Player</button>
+      <button onclick="gameContr.setGameModeTwo(); gameContr.gameModePopupHide()">Player vs Computer</button>
+    </div>
+    <div class="game">
+      <div class="title">Tic-Tac-Toe</div>
+      <div class="controls">
+        <button class="change-mode" onclick="gameContr.gameModePopupShow(); gameContr.restartGame()">Change Mode</button>
+        <button class="reset-button" onclick="gameContr.restartGame()">Restart</button>
+        <div class="desc">*</div>
+        <div class="desc">Player One: X</div>
+        <div class="desc">Player Two/Computer: O</div>
+        <div class="desc">*</div>
+        <div class="result-text"></div>
+      </div>
+      <div class="gameboard">
+        <div class="cell" id="0" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="1" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="2" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="3" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="4" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="5" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="6" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="7" onclick="gameContr.playMove()"></div>
+        <div class="cell" id="8" onclick="gameContr.playMove()"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
